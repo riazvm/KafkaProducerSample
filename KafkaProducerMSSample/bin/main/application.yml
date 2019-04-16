@@ -1,0 +1,35 @@
+configuration:
+  projectName: "bhpwfm"
+  api.baseUrl: "http://localhost:18088/v1"
+  appversion : '/api/v1'
+  appcontext: '/wfm'
+  networkAliasAllowed: false
+  host: "localhost:18088/api"
+  
+server:
+  port: 18088
+
+# swagger properties
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /wfm/api-docs
+        
+logging.level:
+  com.bhp.digital.wfm.poc: debug
+
+topics:
+  createUsertopic: COM.BHP.DIGITAL.WFM.POC.CREATEUSER
+  updateUsertopic: COM.BHP.DIGITAL.WFM.POC.UPDATEUSER
+  createCompanytopic: COM.BHP.DIGITAL.WFM.POC.CREATECOMPANY
+  updateCompanytopic: COM.BHP.DIGITAL.WFM.POC.UPDATECOMPANY
+
+consumer:
+  #propfile: C:\Workspace\BHPVersion1\configfiles\consumer.props
+  propfile: consumer.props
+  topic: COM.BHP.DIGITAL.WFM.POC.CREATEUSER
+   
+producer:
+  #propfile: C:\Workspace\BHPVersion1\configfiles\producer.props
+  propfile: src/main/resources/producer.props
