@@ -1,2 +1,2 @@
 # KafkaProducerSample
-Kafka Producer sample , User &amp; Company objects
+Kafka Producer Micro Service sample , User &amp; Company objects
